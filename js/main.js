@@ -3,8 +3,18 @@
     // Initiate the wowjs
     new WOW().init();
 
+    let navbarHeight = 0;
+    $(window).ready(() => {
+        setTimeout(
+            () => {
+                $('html, body').animate({ scrollTop: $(".main-screen")[0].scrollHeight }, 3000);
+            }, 5000);
+    })
     $(window).scroll(function () {
         const scrollPosition = $(this).scrollTop() || 1;
+        if (scrollPosition > 300) {
+            navbarHeight = $('#navbar').outerHeight();
+        }
         if (scrollPosition <= 738) {
             const imageSize = 100 - ((100 / 738) * scrollPosition);
             $('.main-screen a').css("height", `${imageSize}vh`);
