@@ -8,6 +8,7 @@
         if (scrollPosition <= 738) {
             const imageSize = 100 - ((100 / 738) * scrollPosition);
             $('.main-screen a').css("height", `${imageSize}vh`);
+            $('.main-screen a').css("width", `${imageSize}%`);
             $('.main-screen a').css("marginTop", `${scrollPosition}px`);
             $('.main-screen a').css("opacity", `${imageSize / 100}`);
         }

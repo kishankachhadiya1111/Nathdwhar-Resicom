@@ -84,17 +84,21 @@ a:focus {
 .main-screen {
     background-color: #000000;
     transition: 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .main-screen a{
     display: flex;
     height:100vh;
+    width: 100%;
     align-items: center;
     justify-content: center;
     transition: 0s;
 }
 .main-screen img{
-    max-height: 100%;
-    max-width: 100%;
+    height: max-content;
+    width: 100%;
     transition: 0s;
 }
 .top-bar {
