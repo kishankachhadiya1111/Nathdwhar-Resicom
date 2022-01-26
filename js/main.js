@@ -7,10 +7,13 @@
     $(window).ready(() => {
         setTimeout(
             () => {
-                $('html, body').animate({ scrollTop: $(".main-screen")[0].scrollHeight }, 3000);
+                if ($('html, body').scrollTop() <= 660) {
+                    $('html, body').animate({ scrollTop: 662 }, 3000);
+                }
             }, 5000);
     })
     $(window).scroll(function () {
+        // console.log($(this).scrollTop());
         const scrollPosition = $(this).scrollTop() || 1;
         if (scrollPosition > 300) {
             navbarHeight = $('#navbar').outerHeight();
